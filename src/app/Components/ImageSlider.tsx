@@ -133,7 +133,7 @@ export default function ImageSlider(): JSX.Element {
       >
         HINGGA 80%
       </motion.span></h1>
-        <h1 className="text-primary  font-extralight text-base w-2/3 pt-1 ">Menyatukan Warisan Nusantara dengan Gaya Modern</h1>
+        <h1 className="text-primary  font-normal text-base w-2/3 pt-1 ">Menyatukan Warisan Nusantara dengan Gaya Modern</h1>
         <Button color="primary" variant="shadow" className="w-60 rounded-full py-3 mt-2">
           <h3>ayo gas ayo gas</h3>
       </Button>
@@ -154,7 +154,6 @@ export default function ImageSlider(): JSX.Element {
                     </Button>
       </div>
       </div>
-   
       <button
         className="absolute left-0 top-1/2 transform h-[50px] rounded-xl hover:bg-[#1a222f] mx-1 -mt-[10px] -translate-y-1/2 bg-transparent text-white p-2 group"
         onClick={prevSlide}

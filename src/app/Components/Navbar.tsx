@@ -17,13 +17,14 @@ import Buy from "../../../public/Buy.png";
 import Love from "../../../public/love.png";
 import Indonesia from "../../../public/indonesia.png";
 import Profile from "../../../public/Profile.png";
+import No from "../../../public/No.png";
 
 export const AcmeLogo = () => {
     return (
         <Image
             src={Logo}
-            width={40}
-            height={40}
+            width={30}
+            height={30}
             alt="Picture of the author"
         />
     );
@@ -59,12 +60,12 @@ export default function App() {
             </NavbarContent>
 
             <NavbarContent className="hidden sm:flex gap-4" justify="center">
-                <NavbarItem>
+                <NavbarItem isActive>
                     <Link color="primary" href="#">
                         Beranda
                     </Link>
                 </NavbarItem>
-                <NavbarItem isActive>
+                <NavbarItem>
                     <Link aria-current="page" href="#">
                         About Us
                     </Link>
@@ -77,7 +78,7 @@ export default function App() {
             </NavbarContent>
             <NavbarContent justify="end">
                 <NavbarItem className="ml-52">
-                    <Button as={Link} color="primary" href="#" variant="flat" className="mr-1">
+                    <Button as={Link} color="primary" href="#" variant="faded" className="mr-1">
                         <Image
                             src={Buy}
                             width={22}
@@ -87,14 +88,14 @@ export default function App() {
                         />
                         chart 
                         <Image
-                            src={Logo}
-                            width={20}
-                            height={20}
+                            src={No}
+                            width={22}
+                            height={22}
                             alt="Picture of the author"
                             
                         />
                     </Button>
-                    <Button as={Link} color="primary" href="#" variant="flat" className="mr-1 min-w-5 px-2">
+                    <Button as={Link} color="primary" href="#" variant="faded" className="mr-1 min-w-5 px-2">
                         <Image
                             src={Love}
                             width={22}
