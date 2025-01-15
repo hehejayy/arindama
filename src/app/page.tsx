@@ -8,8 +8,8 @@ import Footer from './Components/footer'
 export default function Home() {
   return (
     <main className='bg-background'>
-      <Navbar/>
-      <Courasel/>
+      <Navbar />
+      <Courasel />
       <AboutUs />
       <Card/>
       <ContactUs/>

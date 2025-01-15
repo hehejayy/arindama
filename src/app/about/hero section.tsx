@@ -3,7 +3,7 @@
 import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import logo from 'logo.png';
+import logo from '../../../public/logogreen.png';
 
 const HeroSection = () => {
   useEffect(() => {
