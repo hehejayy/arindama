@@ -37,9 +37,9 @@ export default function App() {
 
     const menuItems = [
         "Beranda",
-        "About Us",
-        "Products",
-        "Analytics",
+        "Tentang Kami",
+        "Produk",
+        "Kontak Kami",
         "System",
         "Deployments",
         "My Settings",
@@ -72,22 +72,27 @@ export default function App() {
                     </Link>
                 </NavbarItem>
                 <NavbarItem>
+<<<<<<< HEAD
                     <Link
                         color="primary"
                         href="/about"
                         className={pathname === "/about" ? "font-bold" : ""}
                     >
                         About Us
+=======
+                    <Link aria-current="page" href="#">
+                        Tentang Kami
+>>>>>>> f696edbfe8fccf614450e874a357cdb052b84892
                     </Link>
                 </NavbarItem>
                 <NavbarItem>
                     <Link color="primary" href="#">
-                        Products
+                        Produk
                     </Link>
                 </NavbarItem>
             </NavbarContent>
             <NavbarContent justify="end">
-                <NavbarItem className="ml-52">
+                <NavbarItem className="ml-24">
                     <Button as={Link} color="primary" href="#" variant="faded" className="mr-1">
                         <Image
                             src={Buy}
