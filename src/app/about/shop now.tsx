@@ -3,7 +3,7 @@
 import React, { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import bg from 'shopbg.png';
+import bg from '../../../public/shopbg.png';
 
 const ShopNowCard = () => {
   const controls = useAnimation();
@@ -24,7 +24,7 @@ const ShopNowCard = () => {
     <div className="bg-[#D9D9D9] py-16 flex justify-center">
       <motion.div
         className="bg-cover bg-center rounded-lg shadow-lg p-8 md:p-16 flex flex-col md:flex-row justify-between items-center w-full md:w-3/4 mx-4"
-        style={{ backgroundImage: `url(${bg.src})` }} // Use the imported image
+        style={{ backgroundImage: `url(${bg.src})` }}
         ref={ref}
         initial="hidden"
         animate={controls}

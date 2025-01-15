@@ -18,6 +18,7 @@ import Love from "../../../public/love.png";
 import Indonesia from "../../../public/indonesia.png";
 import Profile from "../../../public/Profile.png";
 import No from "../../../public/No.png";
+import { usePathname } from "next/navigation";
 
 export const AcmeLogo = () => {
     return (
@@ -32,6 +33,7 @@ export const AcmeLogo = () => {
 
 export default function App() {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+    const pathname = usePathname();
 
     const menuItems = [
         "Beranda",
@@ -60,13 +62,21 @@ export default function App() {
             </NavbarContent>
 
             <NavbarContent className="hidden sm:flex gap-4" justify="center">
-                <NavbarItem isActive>
-                    <Link color="primary" href="#">
+                <NavbarItem>
+                    <Link
+                        color="primary"
+                        href="/"
+                        className={pathname === "/" ? "font-bold" : ""}
+                    >
                         Beranda
                     </Link>
                 </NavbarItem>
                 <NavbarItem>
-                    <Link aria-current="page" href="#">
+                    <Link
+                        color="primary"
+                        href="/about"
+                        className={pathname === "/about" ? "font-bold" : ""}
+                    >
                         About Us
                     </Link>
                 </NavbarItem>
@@ -84,7 +94,6 @@ export default function App() {
                             width={22}
                             height={22}
                             alt="Picture of the author"
-                        
                         />
                         chart 
                         <Image
@@ -92,7 +101,6 @@ export default function App() {
                             width={22}
                             height={22}
                             alt="Picture of the author"
-                            
                         />
                     </Button>
                     <Button as={Link} color="primary" href="#" variant="faded" className="mr-1 min-w-5 px-2">
@@ -140,4 +148,3 @@ export default function App() {
         </Navbar>
     );
 }
-
