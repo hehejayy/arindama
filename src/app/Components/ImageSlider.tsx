@@ -6,10 +6,9 @@ import image1 from "../../../public/header/banner1.png";
 import image2 from "../../../public/header/banner2.png";
 import image3 from "../../../public/header/banner3.png";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import {Button, Link} from "@nextui-org/react";
+import {Button} from "@nextui-org/react";
 import { motion, Variants,  } from "framer-motion";
 import clsx from 'clsx';
-import Buy from "../../../public/Buy.png";
 
 
 // Interface for image data
