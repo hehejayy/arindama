@@ -5,20 +5,25 @@ import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import Navbar from '../Components/Navbar'; 
+import Footer from '../Components/footer';
 
 const LoginForm = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <>
+    <div className="min-h-screen bg-cover bg-center" style={{ backgroundImage: 'url(loginbg.png)' }}>
       <Navbar />
       <motion.div
-        className="max-w-md mx-auto bg-white p-8 mt-10 rounded-3xl shadow-lg font-poppins"
+        className="max-w-lg mx-auto bg-white p-8 mt-10 mb-10 rounded-3xl shadow-lg font-poppins"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <h2 className="text-2xl font-bold mb-4 text-gray-900">Log in to your account</h2>
+        <h2 className="text-2xl font-bold mb-4 text-gray-900">Masuk ke Akun Anda</h2>
+        
+        <p className="text-sm text-gray-600 mb-6">
+          Kami adalah platform e-commerce yang menghadirkan pakaian tradisional dan modern terinspirasi dari kekayaan budaya Indonesia, memadukan elemen tradisional dengan gaya kontemporer untuk melestarikan warisan nusantara.
+        </p>
 
         <form>
           <div className="mb-4">
@@ -86,17 +91,9 @@ const LoginForm = () => {
             </button>
           </div>
         </form>
-
-        <div className="mt-6 text-left">
-          <p className="text-sm text-gray-600">
-            Not a member? Get exclusive access to exhibitions and events, free admission every day, and much more.
-          </p>
-          <a href="#" className="text-sm font-medium text-gray-900 hover:text-gray-700">
-            Join today
-          </a>
-        </div>
       </motion.div>
-    </>
+      <Footer />
+    </div>
   );
 };
 

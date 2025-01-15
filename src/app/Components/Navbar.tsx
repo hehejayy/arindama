@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 import {
     Navbar,
@@ -26,7 +27,7 @@ export const AcmeLogo = () => {
             src={Logo}
             width={30}
             height={30}
-            alt="Picture of the author"
+            alt="Logo"
         />
     );
 };
@@ -36,16 +37,16 @@ export default function App() {
     const pathname = usePathname();
 
     const menuItems = [
-        "Beranda",
-        "Tentang Kami",
-        "Produk",
-        "Kontak Kami",
-        "System",
-        "Deployments",
-        "My Settings",
-        "Team Settings",
-        "Help & Feedback",
-        "Log Out",
+        { name: "Beranda", path: "/" },
+        { name: "Tentang Kami", path: "/about" },
+        { name: "Produk", path: "/products" },
+        { name: "Kontak Kami", path: "/contact" },
+        { name: "System", path: "/system" },
+        { name: "Deployments", path: "/deployments" },
+        { name: "My Settings", path: "/my-settings" },
+        { name: "Team Settings", path: "/team-settings" },
+        { name: "Help & Feedback", path: "/help-feedback" },
+        { name: "Log Out", path: "/logout" },
     ];
 
     return (
@@ -62,34 +63,17 @@ export default function App() {
             </NavbarContent>
 
             <NavbarContent className="hidden sm:flex gap-4" justify="center">
-                <NavbarItem>
-                    <Link
-                        color="primary"
-                        href="/"
-                        className={pathname === "/" ? "font-bold" : ""}
-                    >
-                        Beranda
-                    </Link>
-                </NavbarItem>
-                <NavbarItem>
-<<<<<<< HEAD
-                    <Link
-                        color="primary"
-                        href="/about"
-                        className={pathname === "/about" ? "font-bold" : ""}
-                    >
-                        About Us
-=======
-                    <Link aria-current="page" href="#">
-                        Tentang Kami
->>>>>>> f696edbfe8fccf614450e874a357cdb052b84892
-                    </Link>
-                </NavbarItem>
-                <NavbarItem>
-                    <Link color="primary" href="#">
-                        Produk
-                    </Link>
-                </NavbarItem>
+                {menuItems.slice(0, 3).map((item) => (
+                    <NavbarItem key={item.name}>
+                        <Link
+                            color="primary"
+                            href={item.path}
+                            className={pathname === item.path ? "font-bold" : ""}
+                        >
+                            {item.name}
+                        </Link>
+                    </NavbarItem>
+                ))}
             </NavbarContent>
             <NavbarContent justify="end">
                 <NavbarItem className="ml-24">
@@ -98,14 +82,14 @@ export default function App() {
                             src={Buy}
                             width={22}
                             height={22}
-                            alt="Picture of the author"
+                            alt="Buy"
                         />
                         chart 
                         <Image
                             src={No}
                             width={22}
                             height={22}
-                            alt="Picture of the author"
+                            alt="No"
                         />
                     </Button>
                     <Button as={Link} color="primary" href="#" variant="faded" className="mr-1 min-w-5 px-2">
@@ -113,7 +97,7 @@ export default function App() {
                             src={Love}
                             width={22}
                             height={22}
-                            alt="Picture of the author" 
+                            alt="Love" 
                         />
                     </Button>
                     <Button as={Link} color="primary" href="#" variant="faded" className="mr-1 min-w-5 px-2">
@@ -121,7 +105,7 @@ export default function App() {
                             src={Indonesia}
                             width={22}
                             height={22}
-                            alt="Picture of the author" 
+                            alt="Indonesia" 
                         />
                     </Button>
                     <Button as={Link} color="primary" href="#" variant="faded" className="mr-1 min-w-5 px-2">
@@ -129,23 +113,21 @@ export default function App() {
                             src={Profile}
                             width={22}
                             height={22}
-                            alt="Picture of the author" 
+                            alt="Profile" 
                         />
                     </Button>
                 </NavbarItem>
             </NavbarContent>
             <NavbarMenu>
                 {menuItems.map((item, index) => (
-                    <NavbarMenuItem key={`${item}-${index}`}>
+                    <NavbarMenuItem key={item.name}>
                         <Link
                             className="w-full"
-                            color={
-                                index === 2 ? "primary" : index === menuItems.length - 1 ? "danger" : "primary"
-                            }
-                            href="#"
+                            color={index === menuItems.length - 1 ? "danger" : "primary"}
+                            href={item.path}
                             size="lg"
                         >
-                            {item}
+                            {item.name}
                         </Link>
                     </NavbarMenuItem>
                 ))}

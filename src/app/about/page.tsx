@@ -3,6 +3,7 @@ import Navbar from '../Components/Navbar'
 import AboutUs from "./about us";
 import WhyChooseUs from "./why choose us";
 import ShopNowCard from "./shop now";
+import Footer from '../Components/footer'
 
 export default function AboutUsPage() {
   return (
@@ -12,6 +13,7 @@ export default function AboutUsPage() {
       <AboutUs />
       <WhyChooseUs />
       <ShopNowCard />
+      <Footer />
     </div>
   );
 }
