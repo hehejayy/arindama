@@ -3,7 +3,7 @@
 import React, { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import bg from '/shopbg.png';
+import bg from 'shopbg.png';
 
 const ShopNowCard = () => {
   const controls = useAnimation();
