@@ -103,7 +103,7 @@ export default function ImageSlider(): JSX.Element {
   return (
     <div className="relative w-full mx-auto mt-4">
       <div
-        className="relative h-[460px] mx-12 group hover:-translate-y-2"
+        className="relative h-48 md:h-[460px] mx-6 md:mx-12 group hover:-translate-y-2"
         onMouseOver={handleMouseOver}
         onMouseLeave={handleMouseLeave}
       >
@@ -115,7 +115,7 @@ export default function ImageSlider(): JSX.Element {
           objectFit="cover"
           className="rounded-xl transition-all duration-500 ease-in-out cursor-pointer"
         />
-        <div className="absolute flex flex-col ml-28 top-16 ">
+        <div className="absolute flex flex-col ml-10 md:ml-28 md:top-16 ">
         <motion.header
                     className={clsx(
                         'z-10 flex flex-col gap-4',
@@ -125,7 +125,7 @@ export default function ImageSlider(): JSX.Element {
                     exit="hide"
                     variants={introHeaderVariants}>
         <h1 className="text-primary  font-semibold text-sm pb-2"></h1>
-        <h1 className="text-primary  font-bold text-5xl  w-[100%] ">DISKON AKHIR TAHUN<br></br> <motion.span
+        <h1 className="text-primary  font-bold text-1xl md:text-5xl  w-[100%] ">DISKON AKHIR TAHUN<br></br> <motion.span
         className="text-red-600"
         initial="rest"
         animate="pulsate"
@@ -133,25 +133,11 @@ export default function ImageSlider(): JSX.Element {
       >
         HINGGA 80%
       </motion.span></h1>
-        <h1 className="text-primary  font-normal text-base w-2/3 pt-1 ">Menyatukan Warisan Nusantara dengan Gaya Modern</h1>
-        <Button color="primary" variant="shadow" className="w-60 rounded-full py-3 mt-2">
-          <h3>ayo gas ayo gas</h3>
+        <h1 className="text-primary  font-normal text-sm md:text-base w-2/3 md:pt-1 ">Menyatukan Warisan Nusantara dengan Gaya Modern</h1>
+        <Button color="primary" variant="shadow" className="w-28 md:w-60 rounded-full py- md:mt-2">
+          <h6 className="text-xs md:text-base">Temukan Gaya Mu</h6>
       </Button>
       </motion.header>
-      </div>
-      <div className="flex justify-center absolute bg-white w-auto h-32 top-[450px] left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-      <Button as={Link} color="primary" href="#" variant="flat" className="mr-1">
-                        <Image
-                            src={Buy}
-                            width={22}
-                            height={22}
-                            alt="Picture of the author"
-                        
-                        />
-                        <div>
-                          
-                        </div>
-                    </Button>
       </div>
       </div>
       <button
