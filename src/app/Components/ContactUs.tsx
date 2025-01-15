@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+
 import { FaTruck, FaHeadphones, FaShieldAlt } from "react-icons/fa";
 
 const ContactUs = () => {
