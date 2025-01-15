@@ -68,7 +68,7 @@ const WhyChooseUs = () => {
               </div>
               <h3 className="text-xl md:text-2xl font-bold mt-4 text-center">Proven Success Record</h3>
               <p className="text-gray-700 text-sm md:text-base mt-2 text-center">
-                Our track record speaks volumes. With consistent success across industries, we've earned trust from startups to enterprises. Choose us for a partner with a history of client satisfaction and project excellence.
+                Our track record speaks volumes. With consistent success across industries, weve earned trust from startups to enterprises. Choose us for a partner with a history of client satisfaction and project excellence.
               </p>
             </div>
           </div>
