@@ -56,7 +56,7 @@ const ContactUs = () => {
               onChange={(e) => setMessage(e.target.value)}
               className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
               placeholder="Tulis pesan Anda"
-              rows="4"
+              rows={4}
               required
             ></textarea>
           </div>
