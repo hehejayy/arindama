@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, JSX } from "react";
 import Image from "next/image";
 import { StaticImageData } from "next/image";
 import image1 from "../../../public/header/banner1.png";
