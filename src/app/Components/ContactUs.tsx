@@ -8,7 +8,7 @@ const ContactUs = () => {
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e:React.FormEvent) => {
     e.preventDefault();
     alert("Pesan telah dikirim!");
   };
