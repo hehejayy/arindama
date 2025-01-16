@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+
 import { FaTruck, FaHeadphones, FaShieldAlt } from "react-icons/fa";
 
 const ContactUs = () => {
@@ -8,7 +8,7 @@ const ContactUs = () => {
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e:React.FormEvent) => {
     e.preventDefault();
     alert("Pesan telah dikirim!");
   };
