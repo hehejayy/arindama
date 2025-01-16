@@ -11,7 +11,12 @@ const HeroSection = () => {
   }, []);
 
   const handleButtonClick = () => {
-    document.getElementById('about-us').scrollIntoView({ behavior: 'smooth' });
+    const aboutUsElement = document.getElementById('about-us');
+    if (aboutUsElement) {
+      aboutUsElement.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      window.scrollBy({ top: 100, behavior: 'smooth' }); 
+    }
   };
 
   return (
